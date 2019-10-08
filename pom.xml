@@ -1,11 +1,13 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.ai-republic</groupId>
 	<artifactId>microverse</artifactId>
 	<version>1.1.3-SNAPSHOT</version>
 	<packaging>pom</packaging>
-	
+
 	<name>Microverse</name>
 	<description>A powerful microservice framework with registry, servers, lookups and a lot more. Make microservices from your Pojos. Includes REST and standalone server.</description>
 	<url>http://www.ai-republic.com/xhtml/products/microverse/overview.xhtml</url>
@@ -21,16 +23,15 @@
 	<developers>
 		<developer>
 			<name>Torsten Oltmanns</name>
-			<email>Torsten.Oltmanns@ai-republic.com</email>
-			<organization>ai-republic GmbH</organization>
-			<organizationUrl>http://www.ai-republic.com</organizationUrl>
+			<email>Torsten.O@gmx.net</email>
 		</developer>
 	</developers>
 
 	<scm>
-		<connection>scm:svn:svn://ai-republic.com/repository/ai-republic/microverse/trunk</connection>
-		<developerConnection>scm:svn:svn://ai-republic.com/repository/ai-republic/microverse/trunk</developerConnection>
-		<url>scm:svn:svn://ai-republic.com/repository/ai-republic/microverse/trunk</url>
+		<connection>scm:git:git://github.com/ai-republic/microverse.git</connection>
+		<developerConnection>scm:git:git@github.com:ai-republic/microverse.git</developerConnection>
+		<url>https://github.com/ai-republic/microverse</url>
+		<tag>HEAD</tag>
 	</scm>
 
 	<distributionManagement>
@@ -42,10 +43,10 @@
 			<id>ossrh</id>
 			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
 		</repository>
-  	</distributionManagement>
-  	
-  	<profiles>
-		<profile> 
+	</distributionManagement>
+
+	<profiles>
+		<profile>
 			<id>release</id>
 			<build>
 				<plugins>
@@ -66,7 +67,7 @@
 				</plugins>
 			</build>
 		</profile>
-  	</profiles>
+	</profiles>
 
 	<build>
 		<plugins>
@@ -144,15 +145,15 @@
 		<encoding>UTF-8</encoding>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<assertj.version>1.0.0m1</assertj.version>
-		<cdi.version>1.2</cdi.version>
+		<cdi.version>2.0.1</cdi.version>
 		<commons-lang.version>3.2.1</commons-lang.version>
 		<commons-pool.version>2.3</commons-pool.version>
 		<findbugs.version>3.0.0</findbugs.version>
-		<jackson.version>2.2.3</jackson.version>
+		<jackson.version>2.9.10</jackson.version>
 		<jglue.version>3.1.3</jglue.version>
 		<junit.version>4.12</junit.version>
 		<mockito.version>1.9.5</mockito.version>
-		<slf4j.version>1.7.13</slf4j.version>
+		<slf4j.version>1.8.0-beta4</slf4j.version>
 		<weld.version>2.3.4.Final</weld.version>
 	</properties>
 
@@ -202,8 +203,8 @@
 				<version>${commons-pool.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>javax.enterprise</groupId>
-				<artifactId>cdi-api</artifactId>
+				<groupId>jakarta.enterprise</groupId>
+				<artifactId>jakarta.enterprise.cdi-api</artifactId>
 				<version>${cdi.version}</version>
 			</dependency>
 			<dependency>
@@ -279,11 +280,15 @@
 			<artifactId>mockito-all</artifactId>
 			<scope>test</scope>
 		</dependency>
-<!-- 		<dependency> -->
-<!-- 			<groupId>org.jglue.cdi-unit</groupId> -->
-<!-- 			<artifactId>cdi-unit</artifactId> -->
-<!-- 			<scope>test</scope> -->
-<!-- 		</dependency> -->
+		<!-- <dependency> -->
+		<!-- <groupId>org.jglue.cdi-unit</groupId> -->
+		<!-- <artifactId>cdi-unit</artifactId> -->
+		<!-- <scope>test</scope> -->
+		<!-- </dependency> -->
+		<dependency>
+			<groupId>jakarta.enterprise</groupId>
+			<artifactId>jakarta.enterprise.cdi-api</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>org.jboss.weld.se</groupId>
 			<artifactId>weld-se-core</artifactId>

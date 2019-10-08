@@ -24,10 +24,5 @@
 			<artifactId>microverse-testjar-interface</artifactId>
 			<version>${project.version}</version>
 		</dependency>
-
-		<dependency>
-			<groupId>javax.enterprise</groupId>
-			<artifactId>cdi-api</artifactId>
-		</dependency>
 	</dependencies>
 </project>
