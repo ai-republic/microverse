@@ -1,0 +1,4 @@
+service-id=TestClass1
+service-version=1.0
+service-class=com.airepublic.microverse.test.services.TestClass1
+service-interface=com.airepublic.microverse.test.interfaces.ITestService
